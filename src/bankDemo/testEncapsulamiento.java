@@ -18,6 +18,6 @@ public class testEncapsulamiento {
         System.out.println(cuentaPrueba.getTitularCuenta().getCelular());
 
         // Cuenta la cantidad de cuentas creadas a partir de una variable estatica
-        System.out.println(Cuenta.getTotal());
+        System.out.println("\nCantidad de cuentas creadas: " + Cuenta.getTotal());
     }
 }
