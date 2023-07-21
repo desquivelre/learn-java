@@ -1,6 +1,26 @@
 package bankDemo;
 
 public class Cliente {
-    String celular;
-    String nombre;
+    private String celular;
+    private String nombre;
+
+    public Cliente() {
+
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }

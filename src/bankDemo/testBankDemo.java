@@ -5,17 +5,17 @@ public class testBankDemo {
         // Inicializo la cuenta
         Cuenta cuentaDiego = new Cuenta();
         // Datos cuenta
-        cuentaDiego.agencia = 1;
-        cuentaDiego.tipoMoneda = "Soles";
+        cuentaDiego.setAgencia(1);
+        cuentaDiego.setTipoMoneda("Soles");
         // Datos cliente
-        cuentaDiego.titularCuenta.nombre = "Diego";
-        cuentaDiego.titularCuenta.celular = "999775647";
+        cuentaDiego.getTitularCuenta().setNombre("Diego");
+        cuentaDiego.getTitularCuenta().setCelular("999775647");
 
         Cuenta cuentaUsuario2 = new Cuenta();
-        cuentaUsuario2.agencia = 2;
-        cuentaUsuario2.tipoMoneda = "Soles";
-        cuentaUsuario2.titularCuenta.nombre = "Usuario2";
-        cuentaUsuario2.titularCuenta.celular = "999888777";
+        cuentaUsuario2.setAgencia(2);
+        cuentaUsuario2.setTipoMoneda("Soles");
+        cuentaUsuario2.getTitularCuenta().setNombre("Usuario2");
+        cuentaUsuario2.getTitularCuenta().setCelular("999888777");
 
         // Asignar saldo a ambas cuentas(embedded variable)
         System.out.println("-- Asignar saldo a cuentas --\n");
