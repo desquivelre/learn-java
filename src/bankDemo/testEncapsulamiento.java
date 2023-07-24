@@ -14,7 +14,8 @@ public class testEncapsulamiento {
         Cliente clientePrueba = new Cliente();
         clientePrueba.setNombre("Prueba1");
         clientePrueba.setCelular("123456799");
-        Cuenta cuentaPrueba = new Cuenta(1000, clientePrueba, 3, "Soles");
+        Cuenta cuentaPrueba = new Cuenta(clientePrueba, 3, "Soles");
+        cuentaPrueba.depositar(1000);
         System.out.println(cuentaPrueba.getTitularCuenta().getCelular());
 
         // Cuenta la cantidad de cuentas creadas a partir de una variable estatica

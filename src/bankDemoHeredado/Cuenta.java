@@ -1,6 +1,6 @@
-package bankDemo;
+package bankDemoHeredado;
 
-public class Cuenta {
+public abstract class Cuenta {
     private double saldo;
     private Cliente titularCuenta = new Cliente();
     private int agencia;
@@ -78,8 +78,8 @@ public class Cuenta {
         } else if (montoTransferir > this.saldo) {
             System.out.println("ERROR - El monto establecido es mayor al saldo de la cuenta que transfiere");
         } else {
-            this.saldo -= montoTransferir;
-            cuentaPorTransferir.saldo += montoTransferir;
+            this.retirar(montoTransferir);
+            cuentaPorTransferir.depositar(montoTransferir);
 
             // Redondea los saldos a dos cifras decimales
             this.saldo = Math.round(this.saldo * 100.0) / 100.0;

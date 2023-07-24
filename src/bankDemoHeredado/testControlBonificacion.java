@@ -2,7 +2,7 @@ package bankDemoHeredado;
 
 public class testControlBonificacion {
     public static void main(String[] args) {
-        Funcionario funcionarioTest = new Funcionario();
+        Funcionario funcionarioTest = new Contador(); // Clase abstracta, por ello, se asigna la referencia en Contador
         funcionarioTest.setSalario(2000);
 
         Gerente gerenteTest = new Gerente();
