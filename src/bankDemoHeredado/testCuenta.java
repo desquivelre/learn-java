@@ -10,7 +10,7 @@ public class testCuenta {
 
         cuentaCorriente.transferir(1000.40, cuentaAhorro);
 
-        System.out.println("" + cuentaCorriente.getSaldo());
-        System.out.println(cuentaAhorro.getSaldo());
+        System.out.println("Saldo cuenta corriente: " + cuentaCorriente.getSaldo());
+        System.out.println("Saldo cuenta ahorros: " + cuentaAhorro.getSaldo());
     }
 }
