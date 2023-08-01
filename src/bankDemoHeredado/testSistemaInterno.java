@@ -6,6 +6,12 @@ public class testSistemaInterno {
         Gerente gerente = new Gerente();
         Administrador administrador = new Administrador();
 
-        
+        cliente.setClave("AluraCliente");
+        gerente.setClave("AluraGerente");
+        administrador.setClave("AluraAdministrador");
+
+        SistemaInterno prueba = new SistemaInterno();
+        prueba.autenticar(administrador);
+
     }
 }

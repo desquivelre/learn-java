@@ -1,6 +1,6 @@
 package bankDemoHeredado;
 
-public class Cliente implements Autenticable{
+public class Cliente implements Autenticable {
     private String celular;
     private String nombre;
     private String clave;
@@ -31,7 +31,16 @@ public class Cliente implements Autenticable{
     }
 
     @Override
+    public String getClave() {
+        return this.clave;
+    }
+
+    @Override
     public boolean iniciarSesion(String clave) {
-        return clave == "AluraCliente";
+        if (clave == "AluraCliente") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

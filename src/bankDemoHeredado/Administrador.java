@@ -13,7 +13,16 @@ public class Administrador extends Funcionario implements Autenticable {
     }
 
     @Override
+    public String getClave() {
+        return this.clave;
+    }
+
+    @Override
     public boolean iniciarSesion(String clave) {
-        return clave == "AluraAdministrador";
+        if (clave == "AluraAdministrador") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

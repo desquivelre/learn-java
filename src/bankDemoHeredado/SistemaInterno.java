@@ -1,10 +1,8 @@
 package bankDemoHeredado;
 
 public class SistemaInterno {
-    private String clave = "12345";
-
     public boolean autenticar(Autenticable autenticable) {
-        boolean puedeIniciarSesion = autenticable.iniciarSesion(clave);
+        boolean puedeIniciarSesion = autenticable.iniciarSesion(autenticable.getClave());
 
         if (puedeIniciarSesion){
             System.out.println("Login exitoso");
