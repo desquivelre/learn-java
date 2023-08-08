@@ -1,4 +1,4 @@
-package bankDemoHeredado;
+package bankDemoHerencia;
 
 public class testControlBonificacion {
     public static void main(String[] args) {

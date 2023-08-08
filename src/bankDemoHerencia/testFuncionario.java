@@ -1,4 +1,4 @@
-package bankDemoHeredado;
+package bankDemoHerencia;
 
 public class testFuncionario {
     public static void main(String[] args) {

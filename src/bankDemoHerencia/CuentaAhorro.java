@@ -1,4 +1,4 @@
-package bankDemoHeredado;
+package bankDemoHerencia;
 
 public class CuentaAhorro extends Cuenta{
     public CuentaAhorro() {

@@ -1,4 +1,4 @@
-package validateAnnotationTest;
+package AnnotationTest;
 
 import java.lang.reflect.Field;
 import java.time.LocalDate;

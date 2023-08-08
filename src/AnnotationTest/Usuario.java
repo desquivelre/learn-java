@@ -1,9 +1,10 @@
-package validateAnnotationTest;
+package AnnotationTest;
 
 import java.time.LocalDate;
 
 public class Usuario {
     private String nombre;
+    @StringMinLength(lengthValue = 8)
     private String contrasena;
     @EdadMinima(valor = 18)
     private LocalDate fechaNacimiento;

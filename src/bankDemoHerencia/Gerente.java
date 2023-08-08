@@ -1,4 +1,4 @@
-package bankDemoHeredado;
+package bankDemoHerencia;
 
 public class Gerente extends Funcionario implements Autenticable {
     private String clave;

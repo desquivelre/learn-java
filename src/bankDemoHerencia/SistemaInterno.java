@@ -1,4 +1,4 @@
-package bankDemoHeredado;
+package bankDemoHerencia;
 
 public class SistemaInterno {
     public boolean autenticar(Autenticable autenticable) {
