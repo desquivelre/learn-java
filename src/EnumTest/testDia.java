@@ -1,4 +1,4 @@
-package enumTest;
+package EnumTest;
 
 public class testDia {
     public static void main(String[] args) {
