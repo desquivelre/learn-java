@@ -8,7 +8,11 @@ public class testCuenta {
         cuentaCorriente.depositar(2350.25);
         cuentaAhorro.depositar(3500.30);
 
-        cuentaCorriente.transferir(1000.40, cuentaAhorro);
+        try {
+            cuentaCorriente.transferir(1000.40, cuentaAhorro);
+        } catch (SaldoInsuficienteException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("Saldo cuenta corriente: " + cuentaCorriente.getSaldo());
         System.out.println("Saldo cuenta ahorros: " + cuentaAhorro.getSaldo());

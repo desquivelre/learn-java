@@ -61,18 +61,15 @@ public abstract class Cuenta {
         }
     }
 
-    public void retirar(double montoRetirar) {
-        if (montoRetirar < 0) {
-            System.out.println("ERROR - El monto establecido es negativo");
-        } else if (montoRetirar > this.saldo) {
-            System.out.println("ERROR - El monto establecido es mayor al saldo actual");
-        } else {
-            this.saldo -= montoRetirar;
-            System.out.println("SUCCESS - Se realizó la operación con éxito");
+    public void retirar(double montoRetirar) throws SaldoInsuficienteException {
+        if (this.saldo < montoRetirar) {
+            throw new SaldoInsuficienteException("ERROR - No tiene saldo");
         }
+        this.saldo -= montoRetirar;
+        System.out.println("SUCCESS - Se realizó la operación con éxito");
     }
 
-    public void transferir(double montoTransferir, Cuenta cuentaPorTransferir) {
+    public void transferir(double montoTransferir, Cuenta cuentaPorTransferir) throws SaldoInsuficienteException {
         if (montoTransferir < 0) {
             System.out.println("ERROR - El monto establecido es negativo");
         } else if (montoTransferir > this.saldo) {
