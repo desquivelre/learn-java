@@ -1,6 +1,6 @@
 package pe.com.alura.ExceptionTest;
 
-public class Account {
+public class Cuenta {
     void depositar() throws myExceptionHeredada {
 
     }
