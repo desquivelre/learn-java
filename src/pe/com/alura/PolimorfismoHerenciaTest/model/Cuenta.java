@@ -1,5 +1,12 @@
 package pe.com.alura.PolimorfismoHerenciaTest.model;
 
+
+/**
+ * Cuenta va a crear nuevas instancias de CuentaCorriente y CuentaAhorro.
+ * @version 1.0
+ * @author Diego Esquivel Reyes
+ */
+
 public abstract class Cuenta {
     private double saldo;
     private Cliente titularCuenta = new Cliente();
@@ -8,10 +15,19 @@ public abstract class Cuenta {
 
     private static int total = 0;   // Cuenta el total de cuentas creadas
 
+    /**
+     * Instancia una nueva cuenta sin parametros.
+     */
     public Cuenta() {
         total++;
     }
 
+    /**
+     * Instancia una cuenta utilizando como parámetros: titularCuenta , agencia y tipoMoneda.
+     * @param titularCuenta
+     * @param agencia
+     * @param tipoMoneda
+     */
     public Cuenta(Cliente titularCuenta, int agencia, String tipoMoneda) {
         this.titularCuenta = titularCuenta;
         this.agencia = agencia;
@@ -61,6 +77,11 @@ public abstract class Cuenta {
         }
     }
 
+    /**
+     * Este metodo retira dinero de la cuenta y si ocurre error, devuelve una excepción.
+     * @param montoRetirar
+     * @throws SaldoInsuficienteException
+     */
     public void retirar(double montoRetirar) throws SaldoInsuficienteException {
         if (this.saldo < montoRetirar) {
             throw new SaldoInsuficienteException("ERROR - No tiene saldo");
