@@ -3,8 +3,9 @@ package pe.com.alura.PolimorfismoHerenciaTest.model;
 
 /**
  * Cuenta va a crear nuevas instancias de CuentaCorriente y CuentaAhorro.
- * @version 1.0
+ *
  * @author Diego Esquivel Reyes
+ * @version 1.0
  */
 
 public abstract class Cuenta {
@@ -20,10 +21,12 @@ public abstract class Cuenta {
      */
     public Cuenta() {
         total++;
+        System.out.println("Agencia: " + this.agencia + " Tipo moneda: " + this.tipoMoneda);
     }
 
     /**
      * Instancia una cuenta utilizando como parámetros: titularCuenta , agencia y tipoMoneda.
+     *
      * @param titularCuenta
      * @param agencia
      * @param tipoMoneda
@@ -33,6 +36,7 @@ public abstract class Cuenta {
         this.agencia = agencia;
         this.tipoMoneda = tipoMoneda;
 
+        System.out.println("Agencia: " + this.agencia + " Tipo moneda: " + this.tipoMoneda);
         total++;
     }
 
@@ -79,6 +83,7 @@ public abstract class Cuenta {
 
     /**
      * Este metodo retira dinero de la cuenta y si ocurre error, devuelve una excepción.
+     *
      * @param montoRetirar
      * @throws SaldoInsuficienteException
      */
