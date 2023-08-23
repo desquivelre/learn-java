@@ -1,15 +1,14 @@
 package pe.com.alura.PolimorfismoHerenciaTest.test;
 
-import pe.com.alura.PolimorfismoHerenciaTest.model.Cuenta;
 import pe.com.alura.PolimorfismoHerenciaTest.model.Cliente;
+import pe.com.alura.PolimorfismoHerenciaTest.model.Cuenta;
 import pe.com.alura.PolimorfismoHerenciaTest.model.CuentaAhorro;
 import pe.com.alura.PolimorfismoHerenciaTest.model.CuentaCorriente;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class testOrdenarLista {
+public class testLambda {
     public static void main(String[] args) {
         Cliente cliente = new Cliente();
 
@@ -27,37 +26,11 @@ public class testOrdenarLista {
         cuentas.add(cuentaAhorro1);
 
         System.out.println("Antes de ordenar:");
-        for (Cuenta cuenta : cuentas) {
-            System.out.println(cuenta.getAgencia());
-        }
+        cuentas.forEach(cuenta -> System.out.println(cuenta.getAgencia()));
 
-        Comparator<Cuenta> comparador = new CompararCuentas();
-        cuentas.sort(comparador);
+        cuentas.sort((o1, o2) -> Integer.compare(o1.getAgencia(), o2.getAgencia()));
 
         System.out.println("Despues de ordenar:");
-        for (Cuenta cuenta : cuentas) {
-            System.out.println(cuenta.getAgencia());
-        }
-    }
-}
-
-class CompararCuentas implements Comparator<Cuenta> {
-    @Override
-    public int compare(Cuenta o1, Cuenta o2) {
-//        Forma basica:
-
-//        if (o1.getAgencia() == o2.getAgencia()) {
-//            return 0;
-//        } else if (o1.getAgencia() > o2.getAgencia()) {
-//            return 1;
-//        } else {
-//            return -1;
-//        }
-
-//        Forma intermedia:
-//        return o1.getAgencia() - o2.getAgencia();
-
-//        Forma Wrapper:
-        return Integer.compare(o1.getAgencia(), o2.getAgencia());
+        cuentas.forEach(cuenta -> System.out.println(cuenta.getAgencia()));
     }
 }
